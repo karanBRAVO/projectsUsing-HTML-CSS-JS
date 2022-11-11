@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of N-inputs</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="calcContainer">
+      <div class="numberCalc">
+        <div class="row">
+          <button onclick="addText(7)">7</button>
+          <button onclick="addText(8)">8</button>
+          <button onclick="addText(9)">9</button>
+          <button id="sum">+</button>
+        </div>
+        <div class="row">
+          <button onclick="addText(4)">4</button>
+          <button onclick="addText(5)">5</button>
+          <button onclick="addText(6)">6</button>
+          <button id="minus">-</button>
+        </div>
+        <div class="row">
+          <button onclick="addText(1)">1</button>
+          <button onclick="addText(2)">2</button>
+          <button onclick="addText(3)">3</button>
+          <button onclick="addText('.')">.</button>
+        </div>
+        <div class="row lastRow">
+          <button onclick="addText(0)">0</button>
+          <button onclick="addTwoZero(00)">00</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="innerContainer">
+        <div class="headingContainer">
+          <p>
+            <a href="index.html"><span> Sum of N-inputs </span></a>
+          </p>
+        </div>
+        <div class="showContainer">
+          <p id="showHis"></p>
+        </div>
+        <div class="inputContainer">
+          <p id="userInput"></p>
+          <div class="buttons">
+            <button onclick="del()">x</button>
+            <button onclick="clearAll()">C</button>
+          </div>
+        </div>
+        <div class="outputContainer">
+          <div class="subHeading">
+            <p>Till now the sum is &downarrow;</p>
+          </div>
+          <div class="output">
+            <span id="outputBox">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
