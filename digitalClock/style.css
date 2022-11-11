@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerContainer {
+    width: 70%;
+    height: 60%;
+    padding: 30px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.623);
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headingContainer {
+    background-color: whitesmoke;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading p {
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+}
+
+.boxContainer {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 150px;
+    height: 200px;
+    background-color: #dadce0;
+    border-radius: 5px;
+    border: 1px solid #dadce0;
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.713);
+    margin: 14px 10px;
+}
+
+.time {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 168px;
+}
+
+.time span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 8.35em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.names {
+    background-color: aliceblue;
+    padding: 5px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.names p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.smallBox {
+    background-color: whitesmoke;
+    height: 200px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.milliSecCont {
+    background-color: azure;
+    border-radius: 5px;
+    border: 1px solid #dadce0;
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.713);
+    padding: 10px;
+    text-align: center;
+}
+
+.milliSecCont span {
+    font-size: 0.8em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.msecNameCont {
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.msecNameCont p {
+    font-family: sans-serif;
+    font-size: 0.75em;
+    font-weight: 700;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.milliSecCont span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.innerSmallBox {
+    background-color: azure;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 2px;
+    border: 1px solid azure;
+    padding: 3px;
+    justify-self: bottom;
+    margin-top: 99px;
+    box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.332);
+}
+
+.innerSmallBox span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.secContainer {
+    background-color: whitesmoke;
+}
+
+.secInnerCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 {
+    background-color: #dadce0;
+    border: 1px solid #dadce0;
+    border-radius: 2px;
+    padding: 1px 6px;
+    margin: 2px 3px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box2 span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    font-weight: 600;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.specName {
+    background-color: aliceblue;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.specName p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    font-size: 0.8em;
+    font-weight: 600;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+@media (max-width: 773px) {
+    .container {
+        background-color: whitesmoke;
+    }
+
+    .innerContainer {
+        box-shadow: none;
+    }
+
+    .heading p {
+        font-size: 3.3em;
+    }
+
+    .box {
+        width: 87px;
+        height: 150px;
+        margin: 14px 5.9px;
+    }
+
+    .time {
+        height: 125.45px;
+    }
+
+    .time span {
+        font-size: 5em;
+    }
+
+    .names {
+        padding: 2.9px;
+    }
+
+    .names p {
+        font-size: 0.9em;
+    }
+
+    .smallBox {
+        height: 150px;
+    }
+
+    .milliSecCont {
+        padding: 6.5px;
+    }
+
+    .milliSecCont span {
+        font-size: 0.8em;
+    }
+
+    .msecNameCont {
+        padding: 3px;
+    }
+
+    .innerSmallBox {
+        margin-top: 64px;
+    }
+
+    .innerSmallBox span {
+        font-size: 0.8em;
+    }
+
+    .box2 {
+        padding: 0.5px 0.29px;
+        height: 35px;
+    }
+
+    .box2 span {
+        font-size: 0.8em;
+    }
+
+    .specName p {
+        font-weight: 0.75em;
+        font-weight: 500;
+    }
+}

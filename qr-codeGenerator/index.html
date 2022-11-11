@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <div class="headingCont">
+                <p>
+                    <span>
+                        QR-Code Generator
+                    </span>
+                </p>
+            </div>
+            <div class="subHeadingCont">
+                <p>
+                    <span>
+                        paste any URL or type any text below
+                    </span>
+                </p>
+            </div>
+            <div class="inputCont">
+                <input type="text" name="text" id="userInp" placeholder="URL or Text" autocomplete="off">
+            </div>
+            <div class="buttonContainer">
+                <button id="generateButton">
+                    <span>
+                        Generate QR-Code
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="qrCodeCont" id="qrCodeBox">
+            <div class="qrCodeHeading">
+                <span>
+                    Your QR-Code &DoubleDownArrow;
+                </span>
+            </div>
+            <div class="qrCode">
+                <img src="" alt="qrCode" id="qrCodeImg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

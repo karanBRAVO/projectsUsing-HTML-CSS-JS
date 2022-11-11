@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Multiplication-Problems</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headingContainer">
+            <h1>multiplication-problems</h1>
+            <div class="subHeading">
+                <p>Do not use calculator</p>
+            </div>
+        </div>
+        <div class="innerContainer">
+            <div class="mainContentCont">
+                <div class="scoreContainer">
+                    <span id="user_score"></span>
+                </div>
+                <div class="spanningCont">
+                    <span id="question"></span>
+                </div>
+                <div class="inputContainer">
+                    <input type="number" name="number" id="user_answer" placeholder="Answer">
+                </div>
+                <div class="note">
+                    <p id="msg"></p>
+                    <p id="user_timeTaken"></p>
+                </div>
+                <div class="buttonContainer">
+                    <button onclick="checkAnswer()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

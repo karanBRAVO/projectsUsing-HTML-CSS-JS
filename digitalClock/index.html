@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <div class="headingContainer">
+                <div class="heading">
+                    <p>Digital Clock</p>
+                </div>
+            </div>
+            <div class="boxContainer">
+                <div class="box" id="hrsBox">
+                    <div class="time">
+                        <span id="hrs"></span>
+                    </div>
+                    <div class="names">
+                        <p>hours</p>
+                    </div>
+                </div>
+                <div class="box" id="minBox">
+                    <div class="time">
+                        <span id="min"></span>
+                    </div>
+                    <div class="names">
+                        <p>minutes</p>
+                    </div>
+                </div>
+                <div class="box" id="secBox">
+                    <div class="time">
+                        <span id="sec"></span>
+                    </div>
+                    <div class="names">
+                        <p>seconds</p>
+                    </div>
+                </div>
+                <div class="smallBox">
+                    <div class="milliSecCont">
+                        <span id="msec"></span>
+                        <div class="msecNameCont">
+                            <p>msec</p>
+                        </div>
+                    </div>
+                    <div class="innerSmallBox">
+                        <span id="timeConvention"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="secContainer">
+                <div class="secInnerCont">
+                    <div class="box2">
+                        <span id="date"></span>
+                        <div class="specName">
+                            <p>date</p>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <span id="month"></span>
+                        <div class="specName">
+                            <p>month</p>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <span id="year"></span>
+                        <div class="specName">
+                            <p>year</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

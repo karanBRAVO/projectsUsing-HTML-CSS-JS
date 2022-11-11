@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+/* font-family: 'Xanh Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+/* font-family: 'Poor Story', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/* font-family: 'Roboto Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* font-family: 'Abel', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: yellow;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px grey;
+    border-radius: 3px;
+}
+
+.innerCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 9px;
+}
+
+.navBar {
+    background-color: yellow;
+    padding: 10px;
+    margin: 3px;
+}
+
+.navBar nav p {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 2em;
+}
+
+.inpCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: yellow;
+    padding: 5px;
+    margin: 2px;
+}
+
+.mainInp {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+    padding: 2px;
+}
+
+.mainInp label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+}
+
+.mainInp input {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid black;
+    color: black;
+    outline: none;
+    background-color: yellow;
+    font-family: 'Xanh Mono', monospace;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.mainInp input::placeholder {
+    color: rgb(86, 86, 86);
+    text-transform: capitalize;
+}
+
+.buttonCont button {
+    background-color: black;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.buttonCont button span {
+    color: white;
+    font-family: 'Poor Story', cursive;
+    font-size: 1em;
+    padding: 1px;
+}
+
+.showTableCont {
+    width: 100%;
+}
+
+.showTableHeading {
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.showTableHeading p {
+    color: yellow;
+    background-color: black;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 3px;
+    font-family: 'Abel', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.clrOutput {
+    display: none;
+    margin-left: 5px;
+    width: fit-content;
+}
+
+.clrOutput button {
+    color: white;
+    background-color: black;
+    padding: 4px;
+    border-radius: 3px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.showTable {
+    margin: 5px;
+    margin-top: 0;
+    padding: 10px;
+}
+
+.showTable p {
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+    font-size: 0.9em;
+    background-color: aliceblue;
+    margin: 2px;
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 2px;
+}

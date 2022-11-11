@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.headingContainer {
+    width: fit-content;
+    height: fit-content;
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 1px;
+    border: 1px solid #2B65EC;
+    transform: rotateZ(-90deg);
+    margin: 10px -60px;
+}
+
+.headingContainer h1 {
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    color: #2B65EC;
+    user-select: none;
+}
+
+.subHeading {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.subHeading p {
+    font-size: 0.8em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: grey;
+}
+
+.innerContainer {
+    background-color: #6699ff99;
+    padding: 30px 20px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid aliceblue;
+    box-shadow: 0px 0px 10px #6699ff;
+    width: 350px;
+    height: 300px;
+}
+
+.scoreContainer {
+    text-align: right;
+}
+
+.scoreContainer #user_score {
+    border: 2px solid aliceblue;
+    border-radius: 3px;
+    background-color: white;
+    width: fit-content;
+    font-size: 1em;
+    font-family: serif;
+    font-weight: 600;
+    padding: 2px;
+}
+
+.spanningCont {
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+.spanningCont span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    user-select: none;
+    color: #2C3539;
+}
+
+.inputContainer {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.innerContainer input {
+    padding: 10px;
+    border: 1px solid #dadce0;
+    border-radius: 3px;
+    outline: #dadce0;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    color: black;
+}
+
+.note {
+    padding: 2px 17px;
+}
+
+.note p {
+    user-select: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+}
+
+.buttonContainer {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.buttonContainer button {
+    width: 100px;
+    padding: 8px;
+    background-color: #1F45FC;
+    color: white;
+    border: 2px solid #1F45FC;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+}

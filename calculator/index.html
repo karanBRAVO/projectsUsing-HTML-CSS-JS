@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <section class="mainSec">
+        <div class="heading">
+            <a href="index.html"><p>Calculator</p></a>
+        </div>
+        <div class="mainContainer">
+            <div class="innerContainer">
+                <div class="result">
+                    <div class="container" id="container">
+
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="deleteButtons">
+                        <button id="clear" onclick="clear_all()">C</button>
+                        <button id="remove" onclick="remove_last()">x</button>
+                        <button id="exp" onclick="enter_operator('^')">^</button>
+                        <button id="factorial" onclick="enter_operator('!')">!</button>
+                        <button id="sqrt" onclick="enter_operator('√')">&Sqrt;</button>
+                    </div>
+                    <div class="pad">
+                        <button id="one" onclick="enter_value(1)">1</button>
+                        <button id="two" onclick="enter_value(2)">2</button>
+                        <button id="three" onclick="enter_value(3)">3</button>
+                        <button id="divide" onclick="enter_operator('/')">/</button>
+                        <button id="four" onclick="enter_value(4)">4</button>
+                        <button id="five" onclick="enter_value(5)">5</button>
+                        <button id="six" onclick="enter_value(6)">6</button>
+                        <button id="multiply" onclick="enter_operator('*')">*</button>
+                        <button id="seven" onclick="enter_value(7)">7</button>
+                        <button id="eight" onclick="enter_value(8)">8</button>
+                        <button id="nine" onclick="enter_value(9)">9</button>
+                        <button id="plus" onclick="enter_operator('+')">+</button>
+                        <button id="decimal" onclick="enter_decimal()">.</button>
+                        <button id="zero" onclick="enter_value(0)">0</button>
+                        <button id="equal" onclick="show_answer()">=</button>
+                        <button id="minus" onclick="enter_operator('-')">-</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

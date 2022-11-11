@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mainSec {
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.heading {
+    margin: auto;
+    padding: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.heading p {
+    font-size: 4em;
+    font-family: monospace;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+
+.mainContainer {
+    width: 58%;
+    height: 84%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid white;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px rgb(128, 128, 128);
+    margin: auto;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result {
+    width: 100%;
+    margin: 1px;
+    padding: 2px;
+}
+
+.container {
+    width: 95%;
+    height: 50px;
+    margin: auto;
+    padding: 6px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 10px gray;
+    font-family: monospace;
+    font-size: 38px;
+    cursor: not-allowed;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.container::-webkit-scrollbar {
+    width: 100%;
+    height: 15px;
+    border: 2px solid #9e9e9e;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(242, 242, 242);
+    box-shadow: inset 0px 0px 5px #9e9e9e;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #8e8c8c;
+    border: 2px solid #8e8c8c;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.buttons {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.deleteButtons {
+    margin: 2px;
+    padding: 3px;
+}
+
+.deleteButtons button {
+    width: 70px;
+    height: 50px;
+    padding: 5px 10px;
+    border: 2px solid rgb(63, 63, 63);
+    border-radius: 7px;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 900;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 2px 10px;
+}
+
+.deleteButtons button:hover {
+    box-shadow: 0px 0px 10px #9e9e9e;
+}
+
+.pad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 11px;
+}
+
+.pad button {
+    width: 100px;
+    height: 60px;
+    padding: 3px 3px;
+    margin: 1px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.pad button:hover {
+    box-shadow: 0px 0px 10px #9e9e9e;
+    border-color: #9e9e9e;
+}

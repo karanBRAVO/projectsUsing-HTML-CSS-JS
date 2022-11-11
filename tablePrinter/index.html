@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Table Printing</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navBar">
+            <nav>
+                <div class="headingCont">
+                    <p>Table Printing Using HTML CSS And JAVASCRIPT</p>
+                </div>
+            </nav>
+        </div>
+        <div class="innerCont">
+            <div class="inpCont">
+                <div class="mainInp">
+                    <label for="TableOf">Table Of</label>
+                    <input type="number" name="number" id="TableOf" placeholder="table of...">
+                </div>
+                <div class="mainInp">
+                    <label for="upto">Up To</label>
+                    <input type="number" name="number" id="upTo" placeholder="upto...">
+                </div>
+            </div>
+            <div class="buttonCont">
+                <button id="printBtn">
+                    <span>Print</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="showTableCont">
+        <div class="showTableHeading">
+            <p>Output</p>
+            <div class="clrOutput" id="clrOutputDiv">
+                <button id="clearOutput">Clear Output</button>
+            </div>
+        </div>
+        <div class="showTable" id="showTable">
+            <div id="showTableP">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

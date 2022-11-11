@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="innerContainer">
+        <div class="headingContainer">
+          <p>Timer</p>
+        </div>
+        <div class="timeContainer">
+          <div class="box">
+            <div class="userInp">
+              <p id="HrsminusIcon">-</p>
+              <span id="hours">00</span>
+              <p id="HrsplusIcon">+</p>
+            </div>
+            <div class="name">
+              <span>hours</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="userInp">
+              <p id="MinminusIcon">-</p>
+              <span id="minutes">00</span>
+              <p id="MinplusIcon">+</p>
+            </div>
+            <div class="name">
+              <span>minutes</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="userInp">
+              <p id="SecminusIcon">-</p>
+              <span id="seconds">01</span>
+              <p id="SecplusIcon">+</p>
+            </div>
+            <div class="name">
+              <span>seconds</span>
+            </div>
+          </div>
+        </div>
+        <div class="buttonContainer">
+          <button id="startButton">
+            <span> Start </span>
+          </button>
+          <div class="timerStarted" id="timerStartedButtons">
+            <button id="stopButton">
+              <span> Pause </span>
+            </button>
+            <button id="ResumeButton">
+              <span> Resume </span>
+            </button>
+            <button id="CancelButton">
+              <span> Cancel </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
