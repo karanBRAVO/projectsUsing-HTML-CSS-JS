@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="lang.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="innerContainer">
+        <div class="headingCont">
+          <p><span>Language Translator using HTML CSS && JS</span></p>
+        </div>
+        <div class="textAreaCont">
+          <textarea
+            name="textarea"
+            id="textArea1"
+            cols="30"
+            rows="10"
+            placeholder="Enter your text here ..."
+          ></textarea>
+          <textarea
+            name="textarea"
+            id="textArea2"
+            cols="30"
+            rows="10"
+            placeholder="Translated text..."
+          ></textarea>
+        </div>
+        <div class="iconCont">
+          <div class="textIcon">
+            <div class="imgCont">
+              <img
+                src="speaker.svg"
+                alt=""
+                draggable="false"
+                title="speak out loud"
+                id="speaker1"
+              />
+              <img
+                src="text-file.svg"
+                alt=""
+                draggable="false"
+                title="save as text file"
+                id="saveFile1"
+              />
+            </div>
+            <select name="select" id="select1"></select>
+          </div>
+          <div class="transTextIcon">
+            <select name="select" id="select2"></select>
+            <div class="imgCont">
+              <img
+                src="text-file.svg"
+                alt=""
+                draggable="false"
+                title="save as text file"
+                id="saveFile2"
+              />
+              <img
+                src="speaker.svg"
+                alt=""
+                draggable="false"
+                title="speak out loud"
+                id="speaker2"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="buttonContainer">
+          <button id="translateBtn"><span>Translate text</span></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

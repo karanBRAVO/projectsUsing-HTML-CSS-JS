@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(179, 0, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerContainer {
+  background-color: rgb(230, 154, 255);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(230, 154, 255);
+  border-radius: 6px;
+  box-shadow: 0px 0px 19px rgb(230, 154, 255);
+}
+
+.headingCont,
+.textAreaCont,
+.iconCont,
+.buttonContainer {
+  padding: 5px;
+  margin: 5px;
+}
+
+.headingCont p {
+  text-align: center;
+}
+
+.headingCont p span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+  color: rgb(46, 0, 95);
+}
+
+.textAreaCont textarea {
+  resize: none;
+  max-width: 479px;
+  max-height: 250px;
+  outline: none;
+  border-radius: 8px;
+  background-color: rgb(179, 0, 255);
+  border: 2px solid rgb(179, 0, 255);
+  margin: 3px;
+  padding: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+.textAreaCont textarea::placeholder {
+  color: rgb(255, 255, 255);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
+    sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.iconCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.textIcon,
+.transTextIcon {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  margin: 0 5px;
+  border: 3px solid rgb(179, 0, 255);
+  border-radius: 30px;
+}
+
+.imgCont {
+  display: flex;
+  flex-direction: row;
+}
+
+.imgCont img {
+  width: 30px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 1px;
+  transition: all 1s;
+}
+
+.imgCont img:hover {
+  background-color: rgba(179, 0, 255, 0.436);
+  border-radius: 50px;
+}
+
+.textIcon select,
+.transTextIcon select {
+  margin: 0 15px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  outline: none;
+  border-radius: 3px;
+  border: 2ex solid rgb(0, 0, 0);
+  font-family: sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+.textIcon select::-webkit-scrollbar,
+.transTextIcon select::-webkit-scrollbar {
+  background-color: black;
+  width: 15.5px;
+}
+.textIcon select::-webkit-scrollbar-track,
+.transTextIcon select::-webkit-scrollbar-track {
+  background-color: rgb(47, 47, 47);
+}
+.textIcon select::-webkit-scrollbar-thumb,
+.transTextIcon select::-webkit-scrollbar-thumb {
+  background-color: rgba(190, 190, 190, 0.474);
+  border-radius: 10px;
+}
+.textIcon select::-webkit-scrollbar-thumb:hover,
+.transTextIcon select::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(190, 190, 190, 0.833);
+}
+
+.buttonContainer {
+  text-align: center;
+}
+
+.buttonContainer button {
+  padding: 15px;
+  background-color: rgb(46, 0, 95);
+  cursor: pointer;
+  border: 2px solid rgb(46, 0, 95);
+  border-radius: 5px;
+  box-shadow: 0px 3px 4px rgba(46, 0, 95, 0.67);
+}
+
+.buttonContainer button span {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px;
+}
