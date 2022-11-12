@@ -59,6 +59,17 @@
   color: black;
 }
 
+.textAreaCont textarea::-webkit-scrollbar {
+  background-color: rgb(179, 0, 255);
+}
+.textAreaCont textarea::-webkit-scrollbar-track {
+  background-color: rgb(179, 0, 255);
+}
+.textAreaCont textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(230, 154, 255);
+  border-radius: 10px;
+}
+
 .textAreaCont textarea::placeholder {
   color: rgb(255, 255, 255);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif,
