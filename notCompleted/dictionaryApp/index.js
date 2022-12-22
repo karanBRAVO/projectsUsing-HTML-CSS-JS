@@ -21,4 +21,3 @@ function mvFwdPlaceholder() {
     wordIndex++;
 }
 setInterval(mvFwdPlaceholder, 200);
-

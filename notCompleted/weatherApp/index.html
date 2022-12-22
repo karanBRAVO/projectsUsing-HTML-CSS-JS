@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body class="userSelectNone">
+    <div class="layerContainer" id="locationLayerContainer">
+        <div class="closeCont">
+            <div class="closeBtn" id="closeBtn">
+                <p>x</p>
+            </div>
+        </div>
+        <div class="tpheading">
+            <p>Choose Location</p>
+            <img src="img/location.png" alt="" class="iconSet">
+        </div>
+        <div class="boxContainer">
+            <div>
+                <p>London</p>
+                <p>India</p>
+                <p>Canada</p>
+                <p>Bangladesh</p>
+                <p>Afganistan</p>
+                <p>London</p>
+                <p>India</p>
+                <p>Canada</p>
+                <p>Bangladesh</p>
+                <p>Afganistan</p>
+                <p>London</p>
+                <p>India</p>
+                <p>Canada</p>
+                <p>Bangladesh</p>
+                <p>Afganistan</p>
+            </div>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="placesContainer">
+            <div class="places">
+                <div id="changeLocation" title="change location">
+                    <img src="img/location.png" class="iconSet" alt="">
+                    <p>Morthikari</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="heading">
+                <p>Weather Details</p>
+            </div>
+            <div class="subContainer">
+                <div class="box">
+                    <div class="innerBox">
+                        <p>12&deg;C</p>
+                    </div>
+                    <div class="detailName">
+                        <p>Temperature Felt</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="innerBox">
+                        <p>8km</p>
+                    </div>
+                    <div class="detailName">
+                        <p>Visibility</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="innerBox">
+                        <p>68%</p>
+                    </div>
+                    <div class="detailName">
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="innerBox">
+                        <p>Weak</p>
+                    </div>
+                    <div class="detailName">
+                        <p>UV</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="innerBox">
+                        <p>5 km/h</p>
+                    </div>
+                    <div class="detailName">
+                        <p>NW</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="innerBox">
+                        <p>1019hpa</p>
+                    </div>
+                    <div class="detailName">
+                        <p>Air Pressure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reportContainer">
+            <div class="heading">
+                <p>7-day Weather Report</p>
+            </div>
+            <div class="sevenDayReport">
+                <div class="reportBox">
+                    <div class="date">
+                        <p>Dec 22</p>
+                    </div>
+                    <div class="day">
+                        <p>Today</p>
+                    </div>
+                    <div class="category">
+                        <img src="img/sunny-day.png" alt="" class="iconSet">
+                        <p>Sunny</p>
+                    </div>
+                    <div class="temp">
+                        <p>20/7&deg;C</p>
+                    </div>
+                </div>
+                <div class="reportBox">
+                    <div class="date">
+                        <p>Dec 23</p>
+                    </div>
+                    <div class="day">
+                        <p>Fri</p>
+                    </div>
+                    <div class="category">
+                        <img src="img/sunny-day.png" alt="" class="iconSet">
+                        <p>Sunny</p>
+                    </div>
+                    <div class="temp">
+                        <p>19/7&deg;C</p>
+                    </div>
+                </div>
+                <div class="reportBox">
+                    <div class="date">
+                        <p>Dec 24</p>
+                    </div>
+                    <div class="day">
+                        <p>Sat</p>
+                    </div>
+                    <div class="category">
+                        <img src="img/sunny-day.png" alt="" class="iconSet">
+                        <p>Sunny</p>
+                    </div>
+                    <div class="temp">
+                        <p>20/8&deg;C</p>
+                    </div>
+                </div>
+                <div class="reportBox">
+                    <div class="date">
+                        <p>Dec 25</p>
+                    </div>
+                    <div class="day">
+                        <p>Sun</p>
+                    </div>
+                    <div class="category">
+                        <img src="img/cloudy.png" alt="" class="iconSet">
+                        <p>Partly Cloudy</p>
+                    </div>
+                    <div class="temp">
+                        <p>20/9&deg;C</p>
+                    </div>
+                </div>
+                <div class="reportBox">
+                    <div class="date">
+                        <p>Dec 26</p>
+                    </div>
+                    <div class="day">
+                        <p>Mon</p>
+                    </div>
+                    <div class="category">
+                        <img src="img/cloudy.png" alt="" class="iconSet">
+                        <p>Partly Cloudy</p>
+                    </div>
+                    <div class="temp">
+                        <p>20/8&deg;C</p>
+                    </div>
+                </div>
+                <div class="reportBox">
+                    <div class="date">
+                        <p>Dec 27</p>
+                    </div>
+                    <div class="day">
+                        <p>Tue</p>
+                    </div>
+                    <div class="category">
+                        <img src="img/sunny-day.png" alt="" class="iconSet">
+                        <p>Sunny</p>
+                    </div>
+                    <div class="temp">
+                        <p>21/8&deg;C</p>
+                    </div>
+                </div>
+                <div class="reportBox">
+                    <div class="date">
+                        <p>Dec 28</p>
+                    </div>
+                    <div class="day">
+                        <p>Wed</p>
+                    </div>
+                    <div class="category">
+                        <img src="img/sunny-day.png" alt="" class="iconSet">
+                        <p>Sunny</p>
+                    </div>
+                    <div class="temp">
+                        <p>21/9&deg;C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
