@@ -7,4 +7,4 @@ changeLocation.addEventListener('click', () => {
 });
 closeBtn.addEventListener('click', () => {
     locationLayerContainer.style.display = 'none';
-});
+}); 
