@@ -63,13 +63,19 @@ body {
 }
 
 .innerBox .leftCont,
-.buttonContainer {
-    width: 33%;
+.controllerCont {
+    width: 24%;
+}
+
+.leftCont {
+    display: flex;
+    flex-direction: column;
 }
 
 .buttonContainer {
     display: flex;
     flex-direction: row;
+    width: 54%;
 }
 
 .btn {
@@ -116,6 +122,55 @@ body {
     margin: 1px;
     display: flex;
     flex-direction: row;
+}
+
+.subHeadingCont {
+    display: none;
+    padding: 3px;
+    margin: auto;
+}
+
+.subHeadingCont .subHeading {
+    padding: 2px;
+}
+
+.subHeading div {
+    padding: 1px;
+    margin: 1px;
+}
+
+.subHeading div p {
+    color: #272e39;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.controllerCont {
+    padding: 5px;
+    margin: 2px;
+}
+
+.controllers {
+    padding: 2px;
+}
+
+.controllers div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.controllerCont .controllers div label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #272e39;
+}
+
+.incDec button {
+    margin-left: 5.56px;
 }
 
 .rodStyle {

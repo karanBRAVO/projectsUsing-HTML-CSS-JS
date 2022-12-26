@@ -7,72 +7,148 @@ const selectionSortBtn = document.getElementById("selectionSortBtn");
 const mergeSortBtn = document.getElementById("mergeSortBtn");
 const quickSortBtn = document.getElementById("quickSortBtn");
 const visualizerCont = document.getElementById("visualizerCont");
+const subHead = document.getElementById("subHead");
+const subHeadingCont = document.getElementById("subHeadingCont");
+const buttonContainer = document.getElementById("buttonContainer");
+const speedController = document.getElementById("speedController");
+const decLen = document.getElementById("decLen");
+const incLen = document.getElementById("incLen");
+
+// stores the waiting time so that user get ample time to see what's happening
+let waitTime = 0;
+
+// unsorted array
+let arr = [];
+let len = 10; // initial length of array
+
+// creating a dictionary of div element that is rod
+let dict = {};
 
 // to get new array
 newArrBtn.addEventListener('click', () => {
     location.reload();
+    NotPerforming();
 });
+
+// to decrease the array size
+decLen.addEventListener('click', () => {
+    decreaseArraySize();
+})
+
+// to increase the array size
+incLen.addEventListener('click', () => {
+    increaseArraySize();
+})
 
 // to call bubble sort function on button click
 bubbleSortBtn.addEventListener('click', () => {
+    waitTime = getWaitTime();
+    Performing("Bubble Sort");
     bubbleSort(arr);
 });
 // to call insertion sort function on button click
 insertionSortBtn.addEventListener('click', () => {
-
+    waitTime = getWaitTime();
+    Performing("Insertion Sort");
+    insertionSort(arr);
 });
 // to call selection sort function on button click
 selectionSortBtn.addEventListener('click', () => {
+    waitTime = getWaitTime();
+    Performing("Selection Sort");
     selectionSort(arr);
 });
 // to call merge sort function on button click
 mergeSortBtn.addEventListener('click', () => {
-
+    waitTime = getWaitTime();
+    Performing("Merge Sort");
 });
 // to call quick sort function on button click
 quickSortBtn.addEventListener('click', () => {
-
+    waitTime = getWaitTime();
+    Performing("Quick Sort");
 });
 
-// unsorted array
-let arr = [30, 10, 1, 45, 16, 23, 55, 12, 34, 2];
-
-// creating an array by creating a div element
-for (let i = 0; i < arr.length; i++) {
-    let divEle = document.createElement('div');
-    divEle.className = "rodStyle";
-    divEle.id = `rod_${i + 1}`;
-    visualizerCont.appendChild(divEle);
+// function to remove buttons
+function Performing(which_sort) {
+    subHead.innerHTML = `Performing ${which_sort} ...`;
+    subHeadingCont.style.display = "block";
+    buttonContainer.style.display = "none";
 }
 
-// creating variables for all rods
-const rod_1 = document.getElementById("rod_1");
-const rod_2 = document.getElementById("rod_2");
-const rod_3 = document.getElementById("rod_3");
-const rod_4 = document.getElementById("rod_4");
-const rod_5 = document.getElementById("rod_5");
-const rod_6 = document.getElementById("rod_6");
-const rod_7 = document.getElementById("rod_7");
-const rod_8 = document.getElementById("rod_8");
-const rod_9 = document.getElementById("rod_9");
-const rod_10 = document.getElementById("rod_10");
-
-// making an array of all div
-let eleArr = [rod_1, rod_2, rod_3, rod_4, rod_5, rod_6, rod_7, rod_8, rod_9, rod_10];
-
-// creating a dictionary of div element that is rod
-let dict = {};
-for (let i = 0; i < arr.length; i++) {
-    dict[`rod_${i + 1}`] = eleArr[i];
+// function to get back buttons
+function NotPerforming() {
+    subHeadingCont.style.display = "none";
+    buttonContainer.style.display = "flex";
 }
+
+// to calculate wait time
+function getWaitTime() {
+    let time = 1000 - (speedController.value * 10) + (Math.random() * 10);
+    return time;
+}
+
+// function to generate random array
+function getNewArr(arr, arrayLen) {
+    for (let i = 0; i < arrayLen; i++) {
+        let rand_value = Math.round((Math.random() * 10) * 25) + Math.round(Math.random() * 10);
+        arr[i] = rand_value;
+    }
+}
+getNewArr(arr, len);
+
+// function to increase the array length
+function increaseArraySize() {
+    len++;
+    getNewArr(arr, len);
+    visualizerCont.innerHTML = "";
+    generateRods(len);
+    generateDict(len);
+    changeHeight();
+}
+
+// function to decrease the length of array
+function decreaseArraySize() {
+    if (len > 5) {
+        len--;
+        getNewArr(arr, len);
+        arr.pop();  // to remove the old element at last
+        visualizerCont.innerHTML = "";
+        generateRods(len);
+        generateDict(len);
+        changeHeight();
+    }
+    else {
+        alert("Minimum Length is (5)");
+    }
+}
+
+// function to generate rods
+function generateRods(arrayLen) {
+    // creating an array by creating a div element
+    for (let i = 0; i < arrayLen; i++) {
+        let divEle = document.createElement('div');
+        divEle.className = "rodStyle";
+        divEle.id = `rod_${i + 1}`;
+        visualizerCont.appendChild(divEle);
+    }
+}
+generateRods(len);
+
+// function to generate dictionary
+function generateDict(arrayLen) {
+    for (let i = 0; i < arrayLen; i++) {
+        dict[`rod_${i + 1}`] = document.getElementById(`rod_${i + 1}`);
+    }
+}
+generateDict(len);
 
 // changing the length of element accrording to array
 function changeHeight() {
     for (let i = 0; i < arr.length; i++) {
-        dict[`rod_${i + 1}`].style.height = `${arr[i] * 5}px`;
+        dict[`rod_${i + 1}`].style.height = `${arr[i]}px`;
     }
 }
-// calling it initially
 changeHeight();
 
 // swapping function
@@ -82,32 +158,27 @@ function swap(arr, index_1, index_2) {
     arr[index_2] = temp;
 }
 
-let waitTime = 400;
-
 // bubble sort function
 async function bubbleSort(g_arr) {
     for (let k = 1; k <= g_arr.length; k++) {
         let i;
         for (i = 0; i < g_arr.length - k; i++) {
+            waitTime = getWaitTime();  // update the wait_time in runtime
             dict[`rod_${(i) + 1}`].style.background = "red";
             dict[`rod_${(i + 1) + 1}`].style.background = "darkgreen";
-
             await sleep(waitTime);
-
             if (g_arr[i] > g_arr[i + 1]) {
                 swap(g_arr, i, i + 1);
                 changeHeight();
             }
-
             await sleep(waitTime);
-
             dict[`rod_${(i) + 1}`].style.background = "yellow";
             dict[`rod_${(i + 1) + 1}`].style.background = "yellow";
-
             await sleep(waitTime);
         }
         dict[`rod_${i + 1}`].style.background = "blue";
     }
+    subHead.innerHTML = `Completed Bubble Sort`;
 }
 
 // selection sort function
@@ -116,6 +187,7 @@ async function selectionSort(g_arr) {
         dict[`rod_${i + 1}`].style.background = "orange";
         await sleep(waitTime);
         for (let j = i + 1; j < g_arr.length; j++) {
+            waitTime = getWaitTime();  // update the wait_time in runtime
             dict[`rod_${j + 1}`].style.background = "green";
             await sleep(waitTime);
             if (g_arr[j] < g_arr[i]) {
@@ -129,6 +201,47 @@ async function selectionSort(g_arr) {
         await sleep(waitTime);
         dict[`rod_${i + 1}`].style.background = "darkcyan";
     }
+    subHead.innerHTML = `Completed Selection Sort`;
+}
+
+// insertion sort function
+async function insertionSort(g_arr) {
+    let value;
+    for (let i = 1; i < g_arr.length; i++) {
+        value = g_arr[i];
+        dict[`rod_${i + 1}`].style.background = "black";
+        await sleep(waitTime);
+        for (let j = i - 1; j >= 0; j--) {
+            waitTime = getWaitTime();  // update the wait_time in runtime
+            dict[`rod_${j + 1}`].style.background = "crimson";
+            await sleep(waitTime);
+            if (value < g_arr[j]) {
+                dict[`rod_${j + 1 + 1}`].style.background = "orange";
+                await sleep(waitTime);
+                g_arr[j + 1] = g_arr[j];
+                g_arr[j] = value;
+                changeHeight();
+                dict[`rod_${j + 1 + 1}`].style.background = "yellow";
+                dict[`rod_${i + 1}`].style.background = "black";
+                await sleep(waitTime);
+            }
+            dict[`rod_${j + 1}`].style.background = "yellow";
+            await sleep(waitTime);
+        }
+        dict[`rod_${i + 1}`].style.background = "yellow";
+        await sleep(waitTime);
+    }
+    subHead.innerHTML = `Completed Insertion Sort`;
+}
+
+// function for merge sort
+async function mergeSort() {
+
+}
+
+// function for quick sort
+async function quickSort() {
+
 }
 
 // sleep function
