@@ -62,6 +62,9 @@ selectionSortBtn.addEventListener('click', () => {
 mergeSortBtn.addEventListener('click', () => {
     waitTime = getWaitTime();
     Performing("Merge Sort");
+    mergeSort(arr, len);
+    changeHeight();
+    subHead.innerHTML = "Completed Merge Sort";
 });
 // to call quick sort function on button click
 quickSortBtn.addEventListener('click', () => {
@@ -103,7 +106,7 @@ function increaseArraySize() {
     getNewArr(arr, len);
     visualizerCont.innerHTML = "";
     generateRods(len);
-    generateDict(len);
+    generateDict(dict, len);
     changeHeight();
 }
 
@@ -115,7 +118,7 @@ function decreaseArraySize() {
         arr.pop();  // to remove the old element at last
         visualizerCont.innerHTML = "";
         generateRods(len);
-        generateDict(len);
+        generateDict(dict, len);
         changeHeight();
     }
     else {
@@ -136,12 +139,12 @@ function generateRods(arrayLen) {
 generateRods(len);
 
 // function to generate dictionary
-function generateDict(arrayLen) {
+function generateDict(dict, arrayLen) {
     for (let i = 0; i < arrayLen; i++) {
         dict[`rod_${i + 1}`] = document.getElementById(`rod_${i + 1}`);
     }
 }
-generateDict(len);
+generateDict(dict, len);
 
 // changing the length of element accrording to array
 function changeHeight() {
@@ -235,8 +238,56 @@ async function insertionSort(g_arr) {
 }
 
 // function for merge sort
-async function mergeSort() {
+async function mergeSort(arr, len) {
+    // return condition 
+    if (len < 2) {
+        return;
+    }
+    // calculating length of left and right arrays
+    let leftLen = Math.trunc(len / 2);
+    let rightLen = len - leftLen;
+    // creating two empty arrays
+    let leftArr = [];
+    let rightArr = [];
+    // adding elements to the arrays
+    for (let i = 0; i < leftLen; i++) {  // left array
+        leftArr[i] = arr[i];
+    }
+    for (let j = 0; j < rightLen; j++){
+        rightArr[j] = arr[j + leftLen];
+    }
+    // recursion
+    mergeSort(leftArr, leftLen);
+    mergeSort(rightArr, rightLen);
+    // merging the arrays
+    merge(arr, len, leftArr, leftLen, rightArr, rightLen);
+}
+async function merge(arr, len, leftArr, leftLen, rightArr, rightLen) {
+    let i = 0;
+    let j = 0;
+    let k = 0;
 
+    while (i < leftLen && j < rightLen && k < len) {
+        if (leftArr[i] < rightArr[j]) {
+            arr[k] = leftArr[i];
+            i += 1;
+        }
+        else {
+            arr[k] = rightArr[j];
+            j += 1;
+        }
+        k += 1;
+    }
+    while (i < leftLen && k < len) {
+        arr[k] = leftArr[i];
+        i += 1;
+        k += 1;
+    }
+    while (j < rightLen && k < len) {
+        arr[k] = rightArr[j];
+        j += 1;
+        k += 1;
+    }
 }
 
 // function for quick sort
