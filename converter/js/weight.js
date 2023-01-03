@@ -1,3 +1,0 @@
-function differentWeightConversions(from, to) {
-
-}

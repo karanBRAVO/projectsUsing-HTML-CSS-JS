@@ -1,3 +1,0 @@
-function differentAreaConversions(from, to) {
-
-}
